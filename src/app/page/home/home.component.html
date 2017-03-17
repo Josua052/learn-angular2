@@ -1,26 +1,13 @@
 <div class="container">
-  <div class="jumbotron">
-  <h1>Angular 2 Tutorial Part-2</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="col-md-4" *ngFor = "let island of indonesiaIslandList" style="margin-top:10px;">
+    <md-card>
+     <md-card-content>
+      <h2>Pulau {{island}}</h2>
+       <p>ini adalah pulau {{island}} </p>
+     </md-card-content>
+     <md-card-actions layout="row" layout-align="right center">
+       <button md-button>Detail Pulau</button>
+     </md-card-actions>
+    </md-card>
   </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <h2>Animated Alerts</h2>
-   <p>The .fade and .in classes adds a fading effect when closing the alert message.</p>
-   <div class="alert alert-success alert-dismissable fade in">
-     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-     <strong>Success!</strong> This alert box could indicate a successful or positive action.
-   </div>
-   <div class="alert alert-info alert-dismissable fade in">
-     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-     <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
-   </div>
-   <div class="alert alert-warning alert-dismissable fade in">
-     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-     <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
-   </div>
-   <div class="alert alert-danger alert-dismissable fade in">
-     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-     <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
-   </div>
 </div>

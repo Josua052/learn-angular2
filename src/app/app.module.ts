@@ -4,23 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { AlertModule } from 'ng2-bootstrap';
-import { ButtonsModule } from 'ng2-bootstrap/buttons';
 import { AboutComponent } from './page/about/about.component';
 import { TopMenuComponent } from './common/top-menu/top-menu.component';
 import { AppRoutingModule } from './page/app.route.module';
 import { HomeComponent } from './page/home/home.component';
+import { MaterialModule } from '@angular/material';
+import { DetailIslandComponent } from './page/home/detail-island.component';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopMenuComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    DetailIslandComponent
   ],
   imports: [
-    AlertModule.forRoot(),
-    ButtonsModule.forRoot(),
+    MaterialModule,
     BrowserModule,
     FormsModule,
     HttpModule,
