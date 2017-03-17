@@ -1,9 +1,9 @@
 <div class="container">
-  <div class="col-md-4" *ngFor = "let island of indonesiaIslandList" style="margin-top:10px;">
+  <div class="col-md-4" *ngFor = "let island of this.data"  (click)="onSelect(hero)" style="margin-top:10px;">
     <md-card>
      <md-card-content>
-      <h2>Pulau {{island}}</h2>
-       <p>ini adalah pulau {{island}} </p>
+      <h2>Pulau {{island.name}}</h2>
+       <p>ini adalah pulau {{island.name}} </p>
      </md-card-content>
      <md-card-actions layout="row" layout-align="right center">
        <button md-button>Detail Pulau</button>
