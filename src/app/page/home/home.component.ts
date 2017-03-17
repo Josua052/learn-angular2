@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, Inject, Renderer,OnInit,OnDestroy } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
-
+import { Router } from '@angular/router';
+import { Island }   from './island';
 @Component({
   selector: 'home',
   templateUrl: './home.component.html'
@@ -10,8 +11,9 @@ export class HomeComponent implements OnInit{
   title: string;
   data : any;
   indonesiaIslandList :string[];
+  islands : Island[];
 
-  constructor(){
+  constructor(private router: Router){
 
   }
   ngOnInit(): void {
@@ -19,16 +21,21 @@ export class HomeComponent implements OnInit{
     this.indonesiaIslandList = ['Sumatera', 'Jawa', 'Bali', 'Kalimantan','Sulawesi','Papua'];
     let populateIsland = {
         "data" : [
-            {"id" :"1", "name" : "Sumatera"},
-            {"id" :"2", "name" : "Jawa"},
-            {"id" :"3", "name" : "Bali"},
-            {"id" :"4", "name" : "Kalimantan"},
-            {"id" :"5", "name" : "Sulawesi"},
-            {"id" :"6", "name" : "Papua"}
+            {"id" :1, "name" : "Sumatera"},
+            {"id" :2, "name" : "Jawa"},
+            {"id" :3, "name" : "Bali"},
+            {"id" :4, "name" : "Kalimantan"},
+            {"id" :5, "name" : "Sulawesi"},
+            {"id" :6, "name" : "Papua"}
         ]
     }
-    this.data = populateIsland.data;
-    console.log(this.data)
+    this.islands = populateIsland.data;
+    console.log(this.islands);
+  }
+
+  onSelect(island:Island): void {
+    console.log(island);
+    this.router.navigate(['/detail', island.id]);
   }
 
 }
